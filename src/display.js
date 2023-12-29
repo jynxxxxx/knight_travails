@@ -18,7 +18,6 @@ function placeKnight(cell) {
 }
 
 let isStartClick = true;
-
 let startCell = null;
 let finishCell = null;
 
@@ -54,6 +53,6 @@ function pathSelection(event) {
     }
 }
 
-export { pathSelection }
+export { pathSelection, removeKnight, isStartClick, startCell, finishCell }
 
 

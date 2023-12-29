@@ -1,44 +1,66 @@
-.maincontainer{
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --titleFont: 'Rock Salt', cursive;
+    --mainFont: 'Satisfy', cursive;
+    --brown: #3a2516;
+    background-image: url(./images/map.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.maincontainer {
     display: flex;
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
     gap: 16px;
+    color: var(--brown);
 }
 
-.boardcontainer{
+.boardcontainer {
     display: grid;
-    grid-template-columns: repeat(8, 9vh);
-    height: 72vh;
-    width: 72vh;
-    border: 2px black solid;
+    grid-template-columns: repeat(8, 8vh);
+    height: 64vh;
+    width: 64vh;
+    outline: 2px var(--brown) solid;
+    background-color: rgba(247, 244, 244, 0.5);
 }
 
-.row{
+.row {
     display: grid;
-    grid-template-rows: repeat(8, 9vh);
+    grid-template-rows: repeat(8, 8vh);
 }
 
-.cell{
+.cell {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.black{
-    background-color: black;
+.cell:hover {
+    transform: scale(1.05);
+    border: 2px white solid;
 }
 
-.knight{
+.black {
+    background-color: var(--brown);
+}
+
+.knight {
     height: 7vh;
 }
 
-.start{
+.start {
     box-shadow: 0 0 30px rgb(166, 201, 166);
     border: 5px solid rgb(166, 201, 166);
 }
 
-.end{
+.end {
     box-shadow: 0 0 30px rgb(206, 78, 78);
     border: 5px solid rgb(206, 78, 78);
     font-size: 40px;
@@ -46,7 +68,7 @@
     color: rgb(206, 78, 78);
 }
 
-.path{
+.path {
     background-image: url("./images/dot.png");
     background-size: 4vh;
     background-repeat: no-repeat;
@@ -55,28 +77,47 @@
     font-weight: 900;
 }
 
-.reset{
-    position: relative;
-    left: 30vh;
-    font-size: 25px;
-    font-weight: 400;
-    width: 150px;
+.reset {
+    position: absolute;
+    right: 5rem;
+    bottom: 3rem;
+    font-size: 1.5rem;
+    letter-spacing: 0.5rem;
+    font-weight: 600;
+    width: fit-content;
+    border: 2px var(--brown) solid;
     border-radius: 12px;
+    padding: 0.5rem 1rem;
+    font-family: var(--mainFont);
+    background-color: rgba(241, 229, 211, 0.8)
 }
 
-.title{
-    font-size: 60px;
+.reset:hover {
+    transform: scale(1.05);
     font-weight: 900;
-    padding-top: 36px;
-} 
+}
+
+.title {
+    font-size: 4rem;
+    font-weight: 900;
+    letter-spacing: 1rem;
+    padding-top: 1.5rem;
+    font-family: var(--titleFont);
+    height: 9rem;
+    color: #271406;
+}
 
 .text {
-    font-size: 30px;
+    font-size: 2rem;
     text-align: center;
     height: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-bottom: 24px;
+    margin-bottom: 1rem;
+    font-family: var(--mainFont);
+    background-color: rgba(247, 244, 244, 0.7);
+    width: 75vw;
+    border-radius: 60px;
 }
