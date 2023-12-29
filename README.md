@@ -36,7 +36,7 @@ The knight, a unique chess piece, moves in an "L" shape—two squares in one dir
 1. Clone this repository:
 
 ```bash
-git clone https://github.com/jynxxxxx/knight-moves-explorer.git
+git clone https://github.com/jynxxxxx/knight_travails.git
 ```
 
 2. Open index.html in your preferred web browser.
